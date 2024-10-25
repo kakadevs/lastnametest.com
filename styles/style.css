@@ -27,8 +27,13 @@ body {
   border-radius: 10px;
   font-family: Arial, sans-serif;
 }
-
 header {
+  visibility: visible !important;
+  display: flex !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999 !important; 
   width: 100%;
   height: 60px; 
   display: flex;
@@ -36,19 +41,14 @@ header {
   align-items: center;
   background-color: #000000; 
   color: #ffffff; 
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 9999;
   transition: background-color 0.3s ease;
   border-radius: 5px;
-  padding: 0 20px; 
-  visibility: visible;
+  padding: 0 20px;
 }
 
 body {
   margin: 0;
-  padding-top: 70px; 
+  padding-top: 70px;
 }
 
 @media (max-width: 768px) {
@@ -74,7 +74,7 @@ body {
 
 @media (max-width: 600px) {
   header {
-    width: 100%;
+    width: 100%; 
     height: 50px; 
     position: fixed;
     top: 0;
@@ -87,7 +87,7 @@ body {
   }
 
   header nav ul {
-    flex-direction: column;
+    flex-direction: column; 
     align-items: center;
   }
 
@@ -114,6 +114,8 @@ body {
   body {
     padding-top: 60px;
   }
+}
+
 
 .container {
   justify-content: center;
@@ -202,8 +204,8 @@ img {
   display: block;
   height: 210px;
   width: 100%;
-  max-width: 350px;
-  border: 2px solid #000000cb;
+  max-width: 350px; 
+  border: 2px solid #ffffff00;
   border-radius: 10px;
   margin-right: 15px;
   transition: transform 0.2s;
@@ -258,12 +260,8 @@ a:hover {
   }
 }
 
-@media (max-width: 768px) {
-  header {
-    height: 50px; 
-    padding: 0 10px; 
-  }
 
+@media (max-width: 768px) {
   header nav ul {
     flex-direction: column;
     align-items: center;
@@ -275,12 +273,14 @@ a:hover {
   }
 
   body {
-    padding-top: 60px; 
+    margin: 0;
+    padding: 10px;
+    max-width: 100%;
   }
 
   img {
     width: 100%; 
-    height: auto; 
+    height: auto;
   }
 }
 
